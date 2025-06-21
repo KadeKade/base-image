@@ -11,7 +11,7 @@ set -euo pipefail
 mkdir -p "${USER_HOME}/Desktop"
 cd /tmp
 [[ -n ${PINOKIO_VERSION:-} ]] || PINOKIO_VERSION=$(curl -s https://api.github.com/repos/pinokiocomputer/pinokio/releases/latest |jq -r .tag_name)
-VERSION_NUMBER=${PINOKIO_VERSION:-3.8.0}
+VERSION_NUMBER=${PINOKIO_VERSION:-3.9.0}
 FILE_NAME="pinokio_${VERSION_NUMBER}_amd64.AppImage"
 wget -O "${FILE_NAME}" "https://github.com/pinokiocomputer/pinokio/releases/download/${VERSION_NUMBER}/Pinokio-${VERSION_NUMBER}.AppImage"
 chmod +x "${FILE_NAME}"
